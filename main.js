@@ -32,7 +32,7 @@ for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].onclick = geraSenha;
 }
 
-// Inicializa a primeira senha
+// Inicializa gerando a primeira senha na tela
 geraSenha();
 
 function geraSenha() {
@@ -69,11 +69,11 @@ function geraSenha() {
 function classificaSenha(tamanhoAlfabeto) {
     const valorEntropia = document.querySelector('.entropia');
     
-    // Remove todas as classes de força para não acumular
+    // Reseta as classes e larguras antes de reavaliar
     forcaSenha.classList.remove('fraca', 'media', 'forte');
 
     if (tamanhoAlfabeto === 0) {
-        forcaSenha.style.width = "0%"; // Zera a barra se não houver caracteres
+        forcaSenha.style.width = "0%";
         if (valorEntropia) {
             valorEntropia.textContent = "Selecione pelo menos uma característica.";
         }

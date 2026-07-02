@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
 :root {
-    --branco: #FFF0F5;            /* Branco levemente rosado (Lavender Blush) */
-    --cor-de-fundo: #2D0B1E;       /* Rosa bem escuro/vinho para o fundo */
-    --fundo-senha: #4A1532;       /* Rosa fechado para a área da senha */
-    --fundo-texto: #5C1D3F;       /* Tom de rosa intermediário para os blocos */
-    --borda: #FF69B4;             /* Rosa Choque (Hot Pink) para destacar as bordas */
-    --borda-foco: #FF1493;        /* Rosa Neon (Deep Pink) para foco e botões */
+    --branco: #FFF0F5;            /* Branco levemente rosado */
+    --cor-de-fundo: #2D0B1E;       /* Rosa bem escuro para o fundo geral */
+    --fundo-senha: #4A1532;       /* Tom de rosa intermediário */
+    --fundo-texto: #5C1D3F;       /* Outro tom para destacar caixas */
+    --borda: #FF69B4;             /* Rosa Choque vibrante para as bordas */
+    --borda-foco: #FF1493;        /* Rosa Neon intenso */
     --roboto: 'Roboto', sans-serif;
     --roboto-mono: 'Roboto Mono', monospace;
 }
@@ -25,7 +25,7 @@ body {
 .titulo-principal {
     font-family: var(--roboto-mono);
     font-size: 32px;
-    color: #FFB6C1; /* Rosa claro para o título principal */
+    color: #FFB6C1;
 }
 
 .titulo-secundario {
@@ -55,7 +55,6 @@ body {
 
 #campo-senha:focus {
     outline: none;
-    color: #FFF;
 }
 
 .conteudo {
@@ -103,7 +102,7 @@ body {
     padding: 24px;
     font-size: 24px;
     cursor: pointer;
-    transition: background 0.2s, border-color 0.2s;
+    transition: background 0.2s;
 }
 
 .parametro-senha__botao:hover {
@@ -129,7 +128,7 @@ label {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    accent-color: var(--borda); /* Faz o "check" ficar rosa nos navegadores modernos */
+    accent-color: var(--borda);
 }
 
 .barra {
@@ -143,28 +142,30 @@ label {
     height: 30px;
     position: relative;
     bottom: 30px;
+    transition: width 0.3s ease, background-color 0.3s ease;
 }
 
-/* Mantive as cores lógicas de força da senha (vermelho/amarelo/verde), 
-   mas se quiser mudar para tons de rosa também, é só avisar! */
 .fraca {
-    width: 25%;
-    background-color: #E71B32; 
+    background-color: #E71B32;
 }
 
 .media {
     background-color: #FAF408;
-    width: 50%;
 }
 
 .forte {
     background-color: #00FF85;
-    width: 100%;
 }
 
 .parametro-senha-textos {
     display: flex;
     justify-content: space-between;
+}
+
+.entropia {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #FFB6C1;
 }
 
 @media screen and (min-width: 768px) {
